@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
-// CAR
-const carAPI = require('./car.api');
-router.use('/car', carAPI);
-
+const missionRouter = require("./mission.api.js")
+router.use("/mission",missionRouter)
+const userRouter = require("./user.api.js")
+router.use("/users",userRouter)
 module.exports = router;
